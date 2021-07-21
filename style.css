@@ -1,0 +1,39 @@
+body{
+    background-color: #091921;
+}
+
+#overall-section{
+    height: 100vh;
+}
+
+#calculator-area
+{
+    width: 450px;
+    background-color: #0c2835;
+}
+
+#display{
+    width: 96%;
+    height: 80px;
+    background-color: white;
+    padding: 5px;
+    overflow: hidden;
+}
+
+#clear{
+    background-color: #ff3077;
+}
+#output{
+    font-size: 3em;
+    text-align: end;
+}
+
+@media only screen and (max-width: 688px) {
+    #calculator-area{
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+    
+}
+
