@@ -23,6 +23,20 @@ function doMath(x, y, operator) {
         return x - y;
     }
 }
+function normalMath(array) {
+    let sum = 0, operator = '+';
+    for (i = 0; i < array.length; i++) {
+        if (operator === '+') {
+            sum += array[i];
+        }
+        else {
+            sum -= array[i];
+        }
+        operator = array[++i];
+    }
+    console.log(sum);
+    return [sum];
+}
 
 function solve(array, char) {
     nowArray = [];
@@ -68,11 +82,11 @@ function giveResult(string) {
         array.push(now);
         if (i + 1 < string.length) array.push(string[++i]);
     }
-
+    console.log(array);
     array = solve(array, '/');
     array = solve(array, '*');
-    array = solve(array, '+');
-    array = solve(array, '-');
+    console.log(array);
+    array = normalMath(array);
     output.textContent = array[0];
     if (Number.isNaN(array[0])) {
         return '';
